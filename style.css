@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asar&display=swap');
+/* Colors
+#16B9C0 - bluish
+#C9BEA8 - brownish
+#F9AA33 - yellowish
+#EE4D00 - reddish
+#2D4545 - blackish*/
+body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	user-select: none;
+}
+/*Size of header*/
+.head{
+	background-color: #C9BEA8;
+	position: absolute;
+	width: 100%;
+	height: 520px;
+}
+.head h1{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/*Ajust logo*/
+.head img{
+	width: 15%;
+	height: 15%;
+}
+/*Style the title*/
+#title span{
+	margin-left: 250px;
+	font-family:'Asap', cursive;
+	text-align: center;
+ 	animation: colorchange 10s infinite; 
+}
+@keyframes colorchange {
+  50% { color: #237c3b; text-shadow: 2px 1px #237c3b;}
+  75% { color: #1c2e4a; text-shadow: 2px 1px #1c2e4a;}
+  100% { color: #EE4D00; text-shadow: 2px 1px #EE4D00; } 
+  0% {color: #712034; text-shadow: 2px 1px #712034; } 
+  25% {color: #2e3233; text-shadow: 2px 1px #2e3233;} 	
+}
+/*Style images in header*/
+.image{
+	margin-left: 8%;
+	margin-top: 7%;
+}
+.image img{
+	border-radius: 5px;
+	box-shadow: 2px 2px #C8BEB9, -2px -2px #C8BEB9;
+}
+.image img:first-child{
+	transform: rotate(-6deg) scale(2);
+}
+.image img:nth-child(2){
+	border-top-left-radius: 50px;
+	transform: translate(10%, 90%) scale(1.5) rotate(16deg);
+}
+.image img:nth-child(3){
+	transform: translate(80%, 30%) scale(2) ;
+}
+.skewed1, .skewed2, .skewed3{
+	height: 520px;
+	width: 150px;
+	transform: skew(-10deg);
+}
+.skewed1{
+	position: absolute;
+	background-color: #EE4D00;
+	margin-left: 70%;
+}
+.skewed2{
+	position: absolute;
+	background-color: #2D4545;
+	margin-left: 81%;
+}
+.skewed3{
+	margin-left: 92%;
+	background-color: #16B9C0;
+}
+/*Adjust position and size of navigation bar*/
+.unorder{
+	top: 85px;
+	margin-top: 0;
+	margin-bottom: 2%;
+	background: transparent;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+/*Style links for navigation*/
+.navbar{
+	cursor:pointer;
+	position:relative;
+	padding: 0px 5px;
+	margin: 15px 42px;
+	font-size:28px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	transition: all 1ms linear;
+	list-style: none;
+	text-decoration: none;
+	font-size: 20px;
+	color: #2D4545;
+	font-family: 'YeonSung-Regular', cursive;
+}
+.navbar:hover {
+	border: 2px solid rgba(142, 42, 242, .4);
+	background: rgba(255,0,0,.5);
+	color: white;
+}
+.active{
+	border-bottom: 3px ridge #F9AA33;
+	padding: 0 7px;
+}
+/*Style social media icons and links*/
+.sm .im1, .sm .im2, .sm .im3{
+	cursor: pointer;
+	position: fixed;
+	top: 7px;
+	margin-left: 96%;
+	width: 4%;
+	height: 9%;
+	padding: 0;
+}
+/*Facebook*/
+.sm .im1{
+	top: 7px;
+}
+/*Whatsapp*/
+.sm .im2{
+	top: 57px;
+}
+/*Instagram*/
+.sm .im3{
+	top: 112px;
+}
+/*Style main content*/
+section{
+	margin-left:5%;
+	margin-right:5%;
+}
+/*Style home page content*/
+section p{
+	text-align: center;
+	background:#f6ff4f;
+	margin: 5px 10px;
+	font-size: 20px;
+	line-height: 2em;
+	padding:10px;
+	color: rgba(3,0,11, .8);
+	font-family: 'Patrick Hand', cursive;
+}
+/*Style sub-headings for menu*/
+h3{
+	color: #24f024;
+	margin: 10px 20px;
+	margin-left:40%;
+	font-weight: bold;
+	font-size:25px;
+	font-family: 'YeonSung-Regular',  sans-serif;
+}
+/*Style menu in grids*/
+.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 3fr);
+	grid-gap: 2em;
+}
+.grid > div{
+	background-color: #3452eb;
+}
+/*Image Gallery*/
+#carousel {
+  display: flex;
+}
+#myImg {
+	flex:30%;
+	padding: 10px 30px;
+	width:300px;
+	height:250px;
+}/*Style forms*/
+.frm1, .frm2{
+	margin:0 10%;
+	padding:10px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 2em;
+}
+/*Style order form*/
+.frm1{
+	background-color:#a5b394; 
+	color:#2f0675;
+}
+/*Style catering form*/
+.frm2{
+	background-color: #bdf52f;
+	color: #f20c9a;r;
+}
+
+.lab{
+	display:block;
+    font-family: 'Chakra Petch', cursive;
+    font-weight: bolder; 
+    line-height: 50px;
+}
+
+.inp{
+	font-family: 'Sriracha';
+	resize: vertical;
+	width:50%;
+	height:20%;
+}
+
+.button1{
+	width:10%;
+	height:40px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	background-color:#2f0675; 
+	color:#a5b394;
+}
+
+.button2{
+	width:10%;
+	height:40px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #f20c9a;
+	color: #bdf52f;
+}
+
+.button1:hover{
+	color:rgb(114,223,197);
+}
+
+.button2:hover{
+	color:blue;
+}
+
+.button1:hover, .button2:hover{
+	transform-style:preserve-3d;
+	text-transform: lowercase;
+}
+/*Style footer*/
+footer{
+	width: 100%;
+	font-family: 'Asar', serif;
+	background-color: #16B9C0;
+	color:#2e3d2e;
+	font-size: 15px;
+}
+.foot{
+	padding: 20px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.foot ul, .copy{
+	margin-left: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.foot div{
+	padding: 5px;
+	margin: 5px;
+}
+.foot .locate{
+	display: flex;
+	justify-content: flex-start;
+}
+.foot div h2{
+	padding:0;
+	margin: 0;
+}
+.foot .hours{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: flex-start;
+}
+.foot li, .foot li a{
+	list-style: none;
+	text-decoration: none;
+	margin: 5px 20px;
+	margin-left: 0;
+	color: #2D4545;
+}
+.foot li span{
+	cursor: pointer;
+	transform: translateY(5px);
+	margin: 0 5px;
+}
+.foot li:hover a, .foot li:hover span{
+	color: #3E5555;
+	transition: all .3s linear;
+}
+.copy{
+	padding: 10px;
+	margin: 5px;
+}
+.foot .add{
+	color: #EE4D00;
+	font-size: 18px;
+}
+.foot h4{
+	margin: 5px;
+	margin-left: 0;
+}
+.skewed4, .skewed5{
+	position: absolute;
+	margin-left: 85%;
+}
+.skewed4{
+	transform: translate(68%, -35%) skew(-70deg);
+	background-color: #F9AA33;
+	width: 180px;
+	height: 80px;
+}
+.skewed5{
+	height: 120px;
+	width: 150px;
+	transform: translate(20%, -57%) skew(-70deg);
+	background-color: #C9BEA8;
+}
+
+
+/*Phone specifications*/
+@media screen and (max-width: 600px){
+	.head{
+		width: 100vh;
+		height: 25%;
+	}
+	.skewed1, .skewed2, .skewed3{
+		display: none;
+	}
+	#title span{
+		margin-left: 10px;
+	}
+	.unorder{
+		margin-left: 5px;
+		margin-right: 5px;
+		padding-right:40px;
+		margin-top: 140px;
+	}
+	.navbar{
+		font-size:10px;
+		padding:2px 4px;
+		margin: 5px 10px;
+		text-align: center;
+	}
+	.sm .im3, .sm .im1, .sm .im2{
+		width:35px;
+	}
+	section p{
+		margin:20px 20px;
+	}
+	.putgrid h3{
+		margin-left: 25%;
+	}
+	.myImg {
+		
+		width:200px;
+		height:150px;
+	}
+	.button1, .button2{
+		width:90px;
+		height:40px;
+		text-align: center;
+	}
+}
